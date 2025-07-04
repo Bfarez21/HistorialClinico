@@ -21,7 +21,8 @@ import ista.sistemaClinica.model.services.IPacienteService;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins= {"http://localhost:4200"})
+@CrossOrigin(origins= {"http://localhost:4200"})   // uso localmnte
+//@CrossOrigin(origins= {"http://192.168.18.158:8281"})
 public class PacienteRestController {
 	@Autowired
 	private IPacienteService pacienteService;
@@ -50,9 +51,13 @@ public class PacienteRestController {
 	public List<Paciente> filterByProfesion(@PathVariable String profesion) {
 		return pacienteService.filterByProfesionPac(profesion);
 	}
-	
-	
-	
+
+	@GetMapping("/pacientes/carrera/{carrera}")
+	public List<Paciente> filterByCarrera(@PathVariable String carrera) {
+		return pacienteService.filterByCarreraPac(carrera);
+	}
+
+
 	@PostMapping("/pacientes")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Paciente create(@RequestBody Paciente paciente) {

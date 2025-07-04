@@ -21,7 +21,8 @@ import ista.sistemaClinica.model.services.IAtencionSignoService;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins= {"http://localhost:4200"})
+@CrossOrigin(origins= {"http://localhost:4200"})   // uso localmnte
+//@CrossOrigin(origins= {"http://192.168.18.158:8281"})
 public class AtencionSignoRestController {
 	@Autowired
 	private IAtencionSignoService atencionSignoService;

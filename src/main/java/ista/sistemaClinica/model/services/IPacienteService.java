@@ -14,5 +14,7 @@ public interface IPacienteService {
 	public Paciente findByCedulaPac(String cedulaPac);
 	public List<Paciente> filterByApellidoPac(String apellidoPac);
 	public List<Paciente> filterByProfesionPac(String profesionPac);
+	List<Paciente> filterByCarreraPac(String carreraPac);
+
 
 }

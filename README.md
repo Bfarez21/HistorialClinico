@@ -1,2 +1,2 @@
 # HistorialClinico
- backend
+ backend Spring Boot

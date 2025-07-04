@@ -12,5 +12,7 @@ public interface IPacienteDao extends JpaRepository<Paciente, Long> {
 	Paciente findByCedulaPac(String cedulaPac);
 	List<Paciente> findByApellidoPac(String apellidoPac);
 	List<Paciente> findByProfesionPac(String profesionPac);
+	List<Paciente> findByCarreraPac(String carreraPac);
+
 
 }

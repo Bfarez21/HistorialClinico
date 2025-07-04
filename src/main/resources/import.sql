@@ -95,8 +95,7 @@ INSERT INTO `ficha_medica` (`fk_id_pac`, `fk_id_dis`, `fk_id_ant`, `fecha_elabor
 INSERT INTO `ficha_medica` (`fk_id_pac`, `fk_id_dis`, `fk_id_ant`, `fecha_elaboracion_fic`) VALUES (21, 21, 21, '2024-01-21');
 INSERT INTO `ficha_medica` (`fk_id_pac`, `fk_id_dis`, `fk_id_ant`, `fecha_elaboracion_fic`) VALUES (22, 22, 22, '2024-01-22');
 
-
-INSERT INTO `doctor` (`cedula_doc`, `nombre_doc`, `apellido_doc`, `telefono_doc`, `direccion_doc`, `especialidad_doc`, `codigo_msp_doc`, `genero_doc`, `password_doc`) VALUES ('0102030405', 'Juan', 'Pérez', '0987654321', 'Av. 10 de Agosto 123', 'Cardiología', 'ABC123', 'Masculino', 'password123');
+INSERT INTO `doctor` (`cedula_doc`, `nombre_doc`, `apellido_doc`, `telefono_doc`, `direccion_doc`, `especialidad_doc`, `codigo_msp_doc`, `genero_doc`, `password_doc`) VALUES ('0102030405', 'Maria José', 'Crespo', '0999999999', 'Av. Siempre Viva', 'Medicina General', 'MSP005', 'Femenino', 'Doc1234');
 INSERT INTO `doctor` (`cedula_doc`, `nombre_doc`, `apellido_doc`, `telefono_doc`, `direccion_doc`, `especialidad_doc`, `codigo_msp_doc`, `genero_doc`, `password_doc`) VALUES ('0102030406', 'María', 'García', '0998765432', 'Calle 12 de Octubre 45', 'Pediatría', 'XYZ789', 'Femenino', 'securepassword');
 INSERT INTO `doctor` (`cedula_doc`, `nombre_doc`, `apellido_doc`, `telefono_doc`, `direccion_doc`, `especialidad_doc`, `codigo_msp_doc`, `genero_doc`, `password_doc`) VALUES ('0102030407', 'Luis', 'Martínez', '0976543210', 'Av. de la República 678', 'Oftalmología', 'LMN456', 'Masculino', 'mypassword');
 INSERT INTO `doctor` (`cedula_doc`, `nombre_doc`, `apellido_doc`, `telefono_doc`, `direccion_doc`, `especialidad_doc`, `codigo_msp_doc`, `genero_doc`, `password_doc`) VALUES ('0102030408', 'Ana', 'Fernández', '0965432109', 'Calle Bolívar 32', 'Dermatología', 'DEF123', 'Femenino', 'password456');
@@ -154,9 +153,9 @@ INSERT INTO `enfermedad` (`codigo_enf`, `nombre_enf`, `tipo_enf`, `descripcion_e
 INSERT INTO `enfermedad` (`codigo_enf`, `nombre_enf`, `tipo_enf`, `descripcion_enf`, `sintomas_enf`) VALUES ('E032', 'Enfermedad Celíaca', 'Autoinmune', 'Trastorno en el cual la ingestión de gluten daña el intestino delgado.', 'Diarrea, dolor abdominal, pérdida de peso.');
 
 
-INSERT INTO `atencion_medica` (`motivo_ate`, `enfermedad_actual_ate`, `tratamiento_ate`, `fk_id_ficha_medica`, `fk_id_doctor`, `fecha_atencion_ate`) VALUES ('Motivo 1', 'Enfermedad 1', 'Tratamiento 1', 1, 1, '2024-07-01');
-INSERT INTO `atencion_medica` (`motivo_ate`, `enfermedad_actual_ate`, `tratamiento_ate`, `fk_id_ficha_medica`, `fk_id_doctor`, `fecha_atencion_ate`) VALUES ('Motivo 2', 'Enfermedad 2', 'Tratamiento 2', 2, 2, '2024-07-02');
-INSERT INTO `atencion_medica` (`motivo_ate`, `enfermedad_actual_ate`, `tratamiento_ate`, `fk_id_ficha_medica`, `fk_id_doctor`, `fecha_atencion_ate`) VALUES ('Motivo 3', 'Enfermedad 3', 'Tratamiento 3', 3, 3, '2024-07-03');
+INSERT INTO `atencion_medica` (`motivo_ate`, `enfermedad_actual_ate`, `tratamiento_ate`, `fk_id_ficha_medica`, `fk_id_doctor`, `fecha_atencion_ate`) VALUES ('Motivo 1', 'Enfermedad 1', 'Tratamiento 1', 1, 1, '2025-07-01');
+INSERT INTO `atencion_medica` (`motivo_ate`, `enfermedad_actual_ate`, `tratamiento_ate`, `fk_id_ficha_medica`, `fk_id_doctor`, `fecha_atencion_ate`) VALUES ('Motivo 2', 'Enfermedad 2', 'Tratamiento 2', 2, 2, '2025-07-02');
+INSERT INTO `atencion_medica` (`motivo_ate`, `enfermedad_actual_ate`, `tratamiento_ate`, `fk_id_ficha_medica`, `fk_id_doctor`, `fecha_atencion_ate`) VALUES ('Motivo 3', 'Enfermedad 3', 'Tratamiento 3', 3, 3, '2025-07-03');
 INSERT INTO `atencion_medica` (`motivo_ate`, `enfermedad_actual_ate`, `tratamiento_ate`, `fk_id_ficha_medica`, `fk_id_doctor`, `fecha_atencion_ate`) VALUES ('Motivo 4', 'Enfermedad 4', 'Tratamiento 4', 4, 4, '2024-07-04');
 INSERT INTO `atencion_medica` (`motivo_ate`, `enfermedad_actual_ate`, `tratamiento_ate`, `fk_id_ficha_medica`, `fk_id_doctor`, `fecha_atencion_ate`) VALUES ('Motivo 5', 'Enfermedad 5', 'Tratamiento 5', 5, 5, '2024-07-05');
 INSERT INTO `atencion_medica` (`motivo_ate`, `enfermedad_actual_ate`, `tratamiento_ate`, `fk_id_ficha_medica`, `fk_id_doctor`, `fecha_atencion_ate`) VALUES ('Motivo 6', 'Enfermedad 6', 'Tratamiento 6', 6, 6, '2024-07-06');

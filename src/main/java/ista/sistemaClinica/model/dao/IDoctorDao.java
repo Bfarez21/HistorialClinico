@@ -8,4 +8,6 @@ import ista.sistemaClinica.model.entity.Paciente;
 
 public interface IDoctorDao extends JpaRepository<Doctor, Long> {
 	Doctor findByCedulaDoc(String cedulaDoc);
+	Doctor findByCedulaDocAndPasswordDoc(String cedulaDoc, String passwordDoc);
+
 }

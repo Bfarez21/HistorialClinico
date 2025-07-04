@@ -51,5 +51,9 @@ public class DoctorServiceImp implements IDoctorService{
 		return doctorDao.findByCedulaDoc(cedulaDoc);
 	}
 
+	@Override
+	public Doctor findByCedulaAndPassword(String cedulaDoc, String passwordDoc) {
+		return doctorDao.findByCedulaDocAndPasswordDoc(cedulaDoc, passwordDoc);
+	}
 
 }

@@ -64,7 +64,11 @@ public class PacienteServiceImp implements IPacienteService{
 		
 		return pacienteDao.findByProfesionPac(profesionPac);
 	}
-	
+
+	@Override
+	public List<Paciente> filterByCarreraPac(String carreraPac) {
+		return pacienteDao.findByCarreraPac(carreraPac);
+	}
 
 
 }

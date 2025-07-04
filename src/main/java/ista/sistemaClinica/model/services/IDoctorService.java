@@ -13,5 +13,7 @@ public interface IDoctorService {
 	
 	// Filtros y busquedas
 		public Doctor findByCedDoctor(String cedulaDoc);
+		Doctor findByCedulaAndPassword(String cedulaDoc, String passwordDoc);
+
 
 }

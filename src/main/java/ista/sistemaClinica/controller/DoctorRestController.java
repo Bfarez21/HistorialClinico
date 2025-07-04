@@ -2,8 +2,10 @@ package ista.sistemaClinica.controller;
 
 import java.util.List;
 
+import ista.sistemaClinica.model.entity.LoginRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +22,8 @@ import ista.sistemaClinica.model.services.IDoctorService;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins= {"http://localhost:4200"})
+@CrossOrigin(origins= {"http://localhost:4200"})   // uso localmnte
+//@CrossOrigin(origins= {"http://192.168.18.158:8281"})
 public class DoctorRestController {
 	@Autowired
 	private IDoctorService doctorService;
@@ -70,5 +73,15 @@ public class DoctorRestController {
 	@GetMapping("/doctores/cedula/{cedula}")
 	public Doctor showDoctor(@PathVariable String cedula) {
 		return doctorService.findByCedDoctor(cedula);
+	}
+
+	@PostMapping("/doctores/login")
+	public ResponseEntity<Doctor> login(@RequestBody LoginRequest request) {
+		Doctor doctor = doctorService.findByCedulaAndPassword(request.getCedulaDoc(), request.getPasswordDoc());
+		if (doctor != null) {
+			return ResponseEntity.ok(doctor); // Envía TODO el objeto doctor
+		} else {
+			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+		}
 	}
 }
